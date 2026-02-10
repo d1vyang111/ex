@@ -1,4 +1,4 @@
-# scripts/mpops_diff.py
+
 import json
 import sys
 
@@ -12,7 +12,6 @@ delta = curr["accuracy"] - base["accuracy"]
 
 print("Accuracy delta:", delta)
 
-# Fail CI if regression > 2%
 if delta < -0.02:
     print("❌ MPOps regression detected")
     sys.exit(1)
